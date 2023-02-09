@@ -1,1 +1,26 @@
 # codes
+#include <stdio.h>
+
+int main() {
+     int num;
+   scanf("%d",&num);
+   int temp=num;int rev=0;int i=0;int count=0;
+    int temp1=num;
+   while(temp1>0){
+       temp1=temp1/10;
+       count++;
+   }int n=count;
+   int arr[n];
+while(temp>0){
+    
+      rev=(temp%10);
+      arr[i]=rev;
+      temp=temp/10;
+      i++;
+}i=i-1;
+for(int k=0;k<=i;k++){
+    printf("%d",arr[k]);
+}
+
+    return 0;
+}
