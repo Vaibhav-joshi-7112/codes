@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+   int num;
+   scanf("%d",&num);
+   printf("%d\n",num);
+   int temp=num;int fir=0;int i=0;int count=0;
+    int temp1=num;
+   while(temp1>0){
+       temp1=temp1/10;
+       count++;
+   }int n=count;
+   int arr[n];
+while(temp>=10){
+    
+      fir=(temp%10);
+      arr[i]=fir;
+      temp=temp/10;
+      i++;
+}i=i-1;
+for(int k=i;k>=0;k--){
+    printf("%d",arr[k]);
+}printf("\n");
+i=0;
+while(num>=100){
+    
+      fir=(num%10);
+      arr[i]=fir;
+      num=num/10;
+      i++;
+}i=i-1;
+for(int k=i;k>=0;k--){
+    printf("%d",arr[k]);
+}
+    return 0;
+}
+
