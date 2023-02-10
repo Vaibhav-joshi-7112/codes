@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+int num;
+scanf("%d",&num);
+int arr[101];int sum=0;
+for(int i=0;i<num;i++){
+    scanf("%d",&arr[i]);
+    sum=sum+arr[i];
+}
+printf("the sum of the integers is : %d\n",sum);
+float mean=(float)sum/num;
+printf("the mean of the numbers is : %f\n",mean);
+float add=0;
+for(int i=0;i<num;i++){
+    add=add+pow(arr[i]-(float)mean,2);
+}
+float sd=pow((float)add/(num),0.5);
+printf("the standard deviation of the numbers is : %f\n",sd);
+float variance=pow(sd,2);
+printf("the variance of the numbers is : %f\n",variance);
+
+
+    return 0;
+}
