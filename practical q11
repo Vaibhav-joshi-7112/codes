@@ -1,4 +1,4 @@
-# codes
+//11. Given a number, write a program using while loop to reverse the digits of the number.
 #include <stdio.h>
 
 int main() {
