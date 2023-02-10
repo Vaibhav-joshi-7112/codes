@@ -1,0 +1,22 @@
+//q13 program to find gcf of 2 integers
+#include <stdio.h>
+int main() {
+ int n1;
+scanf("%d\n",&n1);
+ int n2;
+scanf("%d",&n2);
+ int i=1;int max;int k;
+ if(n1>=n2){
+	  k=n2;
+ }else{k=n1;}
+ while(i<=k){
+if(n1%i==0 && n2%i==0){
+	max=i;
+}
+i++;
+ }
+printf("%d",max);
+
+
+	return 0;
+}
