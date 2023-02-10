@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct emp_add{
+    int street_no;
+    char city[1000];
+     char district[1000];
+      char state[1000];
+   
+}address;
+typedef struct employee{
+    char emp_name[1000];
+   long long int emp_mobile;
+    int emp_age;
+    char emp_degree[1000];
+    float emp_exp;
+    struct emp_add add;
+   
+}employee;
+void details(struct employee emp[1000],address add[1000],int mobileno,int num){
+    int i;
+    for(i=0;i<num;i++){
+        if(emp[i].emp_mobile==mobileno){
+            break;
+        }
+    }
+    printf(" name is %s\n",emp[i].emp_name);
+        printf(" mobile is  %d\n",emp[i].emp_mobile);
+        printf("age is %d\n",emp[i].emp_age);
+        printf(" your degree is %s\n",emp[i].emp_degree);
+        printf(" your experience is %f\n",emp[i].emp_exp);
+        printf(" street no. is %d\n ",add[i].street_no);
+        printf(" city is %s\n",add[i].city);
+        printf(" state is %s\n",add[i].state);
+        printf(" district is %s\n",add[i].district);
+     
+   
+}
+int main() {
+    employee emp[1000];
+    address add[1000];
+    int num;
+    printf("enter number of employes\n");
+    scanf("%d",&num);
+   for(int i=0;i<num;i++){
+       printf("enter name\n");
+       scanf("%s",emp[i].emp_name);
+        printf("enter mobile no.\n");
+       scanf("%d",&emp[i].emp_mobile);
+        printf("enter age\n");
+       scanf("%d",&emp[i].emp_age);
+        printf("enter your degree\n");
+       scanf("%s",emp[i].emp_degree);
+        printf("enter your experience\n");
+       scanf("%f",&emp[i].emp_exp);
+        printf("enter street no.\n ");
+       scanf("%d",&add[i].street_no);
+        printf("enter city\n");
+       scanf("%s",add[i].city);
+        printf("enter state \n");
+       scanf("%s",add[i].state);
+        printf("enter district\n");
+       scanf("%s",add[i].district);
+   }
+   printf("enter mobile no.of employee to be accessed\n");
+   int mobile;
+   scanf("%d",&mobile);
+   details(emp,add,mobile,num);
+    return 0;
+}
