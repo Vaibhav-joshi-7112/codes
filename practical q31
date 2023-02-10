@@ -1,0 +1,25 @@
+#include <stdio.h>
+struct time_struct{
+    int hour;
+    int minute;
+    int second;
+   
+};
+int main() {
+    struct time_struct s1;
+      struct time_struct s2;
+      printf("enter number in hours : ");
+      scanf("%d",&s1.hour);
+       printf("enter number in minutes : ");
+      scanf("%d",&s1.minute);
+       printf("enter number in hours : ");
+      scanf("%d",&s1.second);
+      printf("the time is %d:%d:%d",s1.hour,s1.minute,s1.second);
+     
+     
+   
+   
+ 
+    return 0;
+}
+
