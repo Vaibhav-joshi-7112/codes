@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int n;
+    scanf("%d",&n);
+     printf("Before right shift : %d\n ",n);
+     printf("After right shifting the number 1 time : %d\n",n>>1);
+     printf("Hence number has been divided by 2\n");
+   
+     printf("Before left shift : %d\n ",n);
+     printf("After right shifting the number 1 time : %d\n",n<<1);
+     printf("Hence number has been multiplied by 2\n");
+    
+
+    return 0;
+}
