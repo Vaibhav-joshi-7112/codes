@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+//     Write a C program to enter the radius of circle/sphere and 
+//     compute its (i) Perimeter (ii) Area and (iii) Volume
+    float radius;
+    printf("Enter radius");
+    scanf("%f",&radius);
+
+    float perimeter = 3.14*pow(radius,2);
+    float areaCircle = 3.14*radius*radius;
+    float areaSphere = 4*3.14*radius*radius;
+    float volume = 4*3.14*pow(radius,3)/3;
+    printf("perimeter is %f\n", perimeter);
+    printf("area of circle is %f\n", areaCircle);
+    printf("area of sphere is %f\n", areaSphere);
+    printf("volume of sphere is %f\n", volume);
+
+    
+}
