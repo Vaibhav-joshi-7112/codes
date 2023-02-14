@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int n;
+    printf("ENTER VALUE OF n: ");
+    scanf("%d",&n);
+    int num=1;
+    char character='A';
+    for(int i=1;i<=n;i++){
+        for(int j=i;j<n;j++){
+            printf(" ");
+        }
+        for(int j=1;j<=i;j++){
+            if (i%2!=0){
+                printf("%d ",num);
+                num++;
+            }
+            else{
+                printf("%c ",character);
+                character=character+1;
+            }
+
+        }
+        printf("\n");
+
+    }
+    return 0;
+}
