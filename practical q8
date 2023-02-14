@@ -1,0 +1,15 @@
+/*Write a C program to input an investment amount and compute its fixed deposit commulative return after 10 years at the rate of interest of 7.75% pa
+*/
+#include<stdio.h>
+int main(){
+    float principal;
+    printf("Enter principal amount: ");
+    scanf("%f",&principal);
+    for(int i=1;i<=10;i++){
+        float interest=principal * 7.75/100;
+        principal+=interest;
+    }
+    printf("Final amount after 10 years is: %.2f",principal);
+    return 0;
+
+}
