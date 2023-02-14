@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+//to print 2d array
+void print_arr(int arr[][100],int rows,int col){
+  for(int i=0;i<rows;i++){
+    for(int j=0;j<col;j++){
+      printf("%d ",arr[i][j]);
+      
+}
+    printf("\n");
+    }
+  }
+//to initialise the matrix
+void initialise_matrix(int arr[][100],int rows,int column){
+  for(int i=0;i<rows;i++){
+    for(int j=0;j<column;j++){
+      scanf("%d",&arr[i][j]);
+      }
+   } 
+ }
+
+void matrices_sum(int arr[][100],int arr1[][100],int rows,int column){
+      int arr3[100][100];
+   for(int i=0;i<rows;i++){
+    for(int j=0;j<column;j++){
+      arr3[i][j]= arr1[i][j] + arr[i][j];
+    } 
+  }
+  print_arr(arr3,rows,column);
+  }
+
+
+
+
+int main() {
+  //since same order matrices can be added so 
+  //no.of rows and no. of columns of both the matrice
+  //will be same
+  int rows,column;
+  int arr[100][100];
+  int arr1[100][100];
+  printf("enter number of rows of both matrices : \n");
+  scanf("%d",&rows);
+
+   printf("enter number of columns of both matrices :\n");
+  scanf("%d",&column);
+
+  printf("enter elements of first array : \n");
+  initialise_matrix(arr,rows,column);
+  printf("enter elements of second array : \n ");
+  initialise_matrix(arr1,rows,column);
+//adding the 2 matrices-
+  printf("the sum of the 2 matrices is : \n");
+  matrices_sum(arr,arr1,rows,column);
+  
+  return 0;
+}
+  
