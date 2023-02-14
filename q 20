@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+   char st[1000]; 
+   fgets(st,1000,stdin);int i=0;
+   int count_vowel=0;int count_cons=0;int digit=0;
+   while(st[i]!='\0'){
+       if(st[i]=='a'|| st[i]=='e'||st[i]=='i'||st[i]=='o'||st[i]=='u'){
+           count_vowel++;
+           
+       } else if(st[i]=='A'|| st[i]=='E'||st[i]=='I'||st[i]=='O'||st[i]=='U'){
+           count_vowel++;
+           
+       }
+       else if(st[i]>='a'&&st[i]<='z'){count_cons++;}
+       else if(st[i]>='A'&&st[i]<='Z'){count_cons++;}
+       i++;
+   }
+   i=0;
+   while(st[i]!='\0'){
+       if(st[i]>=(int)'0'&&st[i]<=(int)'9'){
+           digit++;
+       }
+       i++;
+   }
+   
+printf("occurence of the vowel is : %d\n",count_vowel);
+printf("occurence of the cons is : %d\n",count_cons);
+printf("occurence of the digit is : %d\n",digit);
+    return 0;
+}
