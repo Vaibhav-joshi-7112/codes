@@ -1,0 +1,65 @@
+#include<stdio.h>
+int main(){
+    char name[30];
+    int level,basic;
+    int ta,entertaina,taxpercent;
+    printf("Enter your name: ");
+    fgets(name,30,stdin);
+    printf("Enter the level: ");
+    scanf("%d",&level);
+    printf("Enter basic: ");
+    scanf("%d",&basic);
+    switch(level){
+        case 1:
+           if (basic>=40000 && basic<=60000){
+               ta=7000;
+               entertaina=3000;
+               taxpercent=10;
+            }
+            else{
+                printf("INVALID SALARY \n");
+            }
+            break;
+        case 2:
+            if (basic>=30000 && basic<=40000){
+               ta=6000;
+               entertaina=2000;
+               taxpercent=8;
+            }
+            else{
+                printf("INVALID SALARY \n");
+            }
+            break;
+        case 3:
+            if (basic>=20000 && basic<=30000){
+               ta=5000;
+               entertaina=1500;
+               taxpercent=5;
+            }
+            else{
+                printf("INVALID SALARY \n");
+            }
+            break;
+        case 4:
+            if (basic>=15000 && basic<=20000){
+               ta=5000;
+               entertaina=1500;
+               taxpercent=0;
+            }
+            else{
+                printf("INVALID SALARY \n");
+            }
+            break;
+        default:
+            printf("INVALID LEVEL \n");
+            
+    }
+    float tax,grosssal,netsal;
+    grosssal= (0.25 * basic) + basic + ta + entertaina;
+    tax=taxpercent/100.0 * grosssal;
+    netsal=grosssal-tax;
+    printf("GROSS SALARY IS: %.2f \n",grosssal);
+    printf("TAX IS: %.2f \n",tax);
+    printf("NET SALARY IS: %.2f \n",netsal);
+    return 0;
+}
