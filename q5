@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Bitwise AND
+     int and_result = num1 & num2;
+    printf("%d & %d = %d\n", num1, num2, and_result);
+
+    // Bitwise OR
+     int or_result = num1 | num2;
+    printf("%d | %d = %d\n", num1, num2, or_result);
+
+    // Bitwise XOR
+     int xor_result = num1 ^ num2;
+    printf("%d ^ %d = %d\n", num1, num2, xor_result);
+
+    // Bitwise NOT
+     int not_result = ~num1;
+    printf("~%d = %d\n", num1, not_result);
+
+    return 0;
+}
