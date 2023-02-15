@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int identical(int *arr1, int *arr2, int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        if (arr1[i] != arr2[i]) {
+            return 0;
+        }
+    }
+    
+    return 1;
+}
+
+int main() {
+    int arr1[] = {1, 2, 3, 4, 5};
+    int arr2[] = {1, 2, 3, 4, 5};
+    int n = 5;
+
+    int c=identical(arr1, arr2, n);
+    printf("%d",c);
+       
+    return 0;
+}
