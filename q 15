@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float x = 1.0;  // set the value of x
+    double sinx = x;
+    double term1 = -x*x*x / 6;
+    double term2 = x*x*x*x*x / 120;
+    double term3 = -x*x*x*x*x*x*x / 5040;
+
+    sinx =sinx+ term1 + term2 + term3;
+
+    printf("sin(%f) = %f\n", x, sinx);
+
+    return 0;
+}
