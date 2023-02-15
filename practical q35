@@ -19,12 +19,12 @@ int main() {
                  }
              }
         }
-    }
+    } FILE *ptr;ptr=fopen("primes.out","w");
     for(int i=1;i<=2500;i++){
         if(arr[i]==1){
-        FILE *ptr;ptr=fopen("sieve.txt","w");
+       
   for(i=1;i<2501;i++){
-     printf(ptr,"%d\n",i);
+     fprintf(ptr,"%d\n",i);
          
   }
         }
