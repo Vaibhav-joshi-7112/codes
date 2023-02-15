@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+   char st[1000]; 
+   FILE *fp;
+   fp=fopen("input.txt","r");
+   fgets(st,1000,fp);int i=0;
+   fclose(fp); 
+  ;int digit=0;
+  while(st[i]!='\0'){
+      if(st[i]>='A'&&st[i]<='Z'){
+          st[i]=st[i]+32;
+      }
+       i++;
+   }
+   int count[27];char ch='a';
+  for(int i=1;i<=26;i++){
+      int rep=0;
+      for(int j=0;st[j]!='\0';j++){
+          if(st[j]==ch){
+              rep++;
+          }
+          
+      }
+       count[i]=rep;
+       ch++;
+  }ch='a';
+ int count1[11];int k=0;int rep1=0;
+   for(int i=0;i<=9;i++){
+      rep1=0;
+      for(int j=0;st[j]!='\0';j++){
+          if(st[j]==k+'0'){
+              rep1++;
+          }
+          
+      }
+       count1[i]=rep1;
+       k++;
+  }
+  FILE *ptr;
+  ptr=fopen("output.txt","w");
+  
+fprintf(ptr,"the occurence of given alphabets is\n");
+for(int i=1;i<=26;i++){
+    fprintf(ptr,"%c-->%d\n",ch,count[i]);
+    ch++;
+}int k1=0;
+fprintf(ptr,"the occurence of given digits is\n");
+for(int i=0;i<=9;i++){
+    fprintf(ptr,"%d-->%d\n",k1,count1[i]);
+    k1++;
+}
+fclose(ptr);
+    return 0;
+}
