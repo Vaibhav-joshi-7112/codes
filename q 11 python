@@ -1,0 +1,15 @@
+n=154
+rev=0
+count=0
+
+org=n
+while(org>0):
+    count=count+1
+    org=org//10
+print(count)   
+count=count-1
+while(n>0):
+    rev=rev+(n%10)*(10**count)
+    n=n//10
+    count=count-1
+print(rev)
