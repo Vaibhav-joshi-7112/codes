@@ -1,0 +1,18 @@
+temp=0
+n=int(input("enter a number: "))
+a=0
+b=1
+if(n>0):
+    print(a)
+    n=n-1
+if(n>0):
+    print(b)
+    n=n-1
+
+while(n>0):
+    c=a+b
+    print(c)
+    temp=c
+    a=b
+    b=temp
+    n=n-1
