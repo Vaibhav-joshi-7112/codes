@@ -1,0 +1,18 @@
+n=int(input("enter a number: "))
+    
+print(2)
+n=n-1
+i=3
+count=2
+check=0
+while(n>0):
+    count=2
+    check=0
+    while(count<i):
+        if(i%count==0):
+            check=check+1
+        count=count+1   
+    if(check==0):
+        print(i)
+        n=n-1
+    i=i+1    
